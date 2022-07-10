@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220710 17:03:05.150" rpa="false" schemaversion="3">
+<suite id="s1" name="Suites" source="D:\mobileAutomation\suites">
+<suite id="s1-s1" name="Bookflight" source="D:\mobileAutomation\suites\bookflight.robot">
+<test id="s1-s1-t1" name="User Should Be Able To BookFlight" line="8">
+<kw name="Open Flight Application" library="bookflight" type="SETUP">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>${REMOTE_URL}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>platformVersion=${PLATFORM_VERSION}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>appActivity=${ACTIVITY_NAME}</arg>
+<arg>appPackage=${PACKAGE_NAME}</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>newCommandTimeout=5000</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" starttime="20220710 17:03:05.836" endtime="20220710 17:03:32.482"/>
+</kw>
+<status status="PASS" starttime="20220710 17:03:05.835" endtime="20220710 17:03:32.483"/>
+</kw>
+<kw name="Click Signin For The Application" library="bookflight">
+<kw name="Tap" library="AppiumLibrary">
+<arg>${Buttonsignin}</arg>
+<doc>Tap element identified by ``locator``. </doc>
+<status status="PASS" starttime="20220710 17:03:32.485" endtime="20220710 17:03:33.215"/>
+</kw>
+<status status="PASS" starttime="20220710 17:03:32.484" endtime="20220710 17:03:33.216"/>
+</kw>
+<kw name="Input Username" library="bookflight">
+<kw name="Input Text" library="AppiumLibrary">
+<arg>${Input_username}</arg>
+<arg>${username_login}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20220710 17:03:33.228" level="INFO">Typing text 'support@ngendigital.com' into text field '//*[@class='android.widget.EditText']'</msg>
+<status status="PASS" starttime="20220710 17:03:33.218" endtime="20220710 17:03:34.558"/>
+</kw>
+<status status="PASS" starttime="20220710 17:03:33.217" endtime="20220710 17:03:34.558"/>
+</kw>
+<kw name="Input Password" library="bookflight">
+<kw name="Input Text" library="AppiumLibrary">
+<arg>${Input_password}</arg>
+<arg>${password_login}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20220710 17:03:34.568" level="INFO">Typing text 'abc123' into text field '//*[@resource-id='com.example.myapplication:id/password']'</msg>
+<status status="PASS" starttime="20220710 17:03:34.559" endtime="20220710 17:03:35.325"/>
+</kw>
+<status status="PASS" starttime="20220710 17:03:34.559" endtime="20220710 17:03:35.326"/>
+</kw>
+<kw name="Click button signin to login" library="bookflight">
+<kw name="Tap" library="AppiumLibrary">
+<arg>${Buttonsignin2}</arg>
+<doc>Tap element identified by ``locator``. </doc>
+<status status="PASS" starttime="20220710 17:03:35.328" endtime="20220710 17:03:36.179"/>
+</kw>
+<status status="PASS" starttime="20220710 17:03:35.327" endtime="20220710 17:03:36.179"/>
+</kw>
+<kw name="Click Book for menu" library="bookflight">
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${Searchmenubook}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" starttime="20220710 17:03:36.182" endtime="20220710 17:03:36.946"/>
+</kw>
+<kw name="Tap" library="AppiumLibrary">
+<arg>${Searchmenubook}</arg>
+<doc>Tap element identified by ``locator``. </doc>
+<status status="PASS" starttime="20220710 17:03:36.946" endtime="20220710 17:03:37.406"/>
+</kw>
+<status status="PASS" starttime="20220710 17:03:36.181" endtime="20220710 17:03:37.408"/>
+</kw>
+<kw name="Click Round Trip" library="bookflight">
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${round_trip}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" starttime="20220710 17:03:37.414" endtime="20220710 17:03:38.535"/>
+</kw>
+<kw name="Tap" library="AppiumLibrary">
+<arg>${round_trip}</arg>
+<doc>Tap element identified by ``locator``. </doc>
+<status status="PASS" starttime="20220710 17:03:38.536" endtime="20220710 17:03:39.289"/>
+</kw>
+<status status="PASS" starttime="20220710 17:03:37.411" endtime="20220710 17:03:39.291"/>
+</kw>
+<kw name="Choose Data From City" library="bookflight">
+<kw name="Tap" library="AppiumLibrary">
+<arg>${tap_fromcity}</arg>
+<doc>Tap element identified by ``locator``. </doc>
+<status status="PASS" starttime="20220710 17:03:39.296" endtime="20220710 17:03:40.199"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${tap_fromcitychicago}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" starttime="20220710 17:03:40.200" endtime="20220710 17:03:41.235"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${tap_fromcitychicago}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220710 17:03:41.242" level="INFO">Clicking element 'xpath=//android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ListView/android.widget.TextView[2]'.</msg>
+<status status="PASS" starttime="20220710 17:03:41.235" endtime="20220710 17:03:42.040"/>
+</kw>
+<status status="PASS" starttime="20220710 17:03:39.294" endtime="20220710 17:03:42.041"/>
+</kw>
+<kw name="Choose Data To City" library="bookflight">
+<kw name="Tap" library="AppiumLibrary">
+<arg>${tap_tocity}</arg>
+<doc>Tap element identified by ``locator``. </doc>
+<status status="PASS" starttime="20220710 17:03:42.043" endtime="20220710 17:03:42.425"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${tap_tocityparis}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" starttime="20220710 17:03:42.426" endtime="20220710 17:03:43.834"/>
+</kw>
+<kw name="Tap" library="AppiumLibrary">
+<arg>${tap_tocityparis}</arg>
+<doc>Tap element identified by ``locator``. </doc>
+<status status="PASS" starttime="20220710 17:03:43.835" endtime="20220710 17:03:44.803"/>
+</kw>
+<status status="PASS" starttime="20220710 17:03:42.042" endtime="20220710 17:03:44.804"/>
+</kw>
+<kw name="Choose Data Class" library="bookflight">
+<kw name="Tap" library="AppiumLibrary">
+<arg>${tap_class}</arg>
+<doc>Tap element identified by ``locator``. </doc>
+<status status="PASS" starttime="20220710 17:03:44.806" endtime="20220710 17:03:45.256"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${tap_classbusiness}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" starttime="20220710 17:03:45.256" endtime="20220710 17:03:46.229"/>
+</kw>
+<kw name="Tap" library="AppiumLibrary">
+<arg>${tap_classbusiness}</arg>
+<doc>Tap element identified by ``locator``. </doc>
+<status status="PASS" starttime="20220710 17:03:46.230" endtime="20220710 17:03:47.173"/>
+</kw>
+<status status="PASS" starttime="20220710 17:03:44.805" endtime="20220710 17:03:47.173"/>
+</kw>
+<kw name="Picklist Startdate Flight" library="bookflight">
+<kw name="Tap" library="AppiumLibrary">
+<arg>${startdate}</arg>
+<doc>Tap element identified by ``locator``. </doc>
+<status status="PASS" starttime="20220710 17:03:47.175" endtime="20220710 17:03:47.604"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${klikstartdate}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" starttime="20220710 17:03:47.605" endtime="20220710 17:03:48.914"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${klikstartdate}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220710 17:03:48.920" level="INFO">Clicking element 'xpath=//android.view.View[@index="22"]'.</msg>
+<status status="PASS" starttime="20220710 17:03:48.914" endtime="20220710 17:03:49.719"/>
+</kw>
+<kw name="Tap" library="AppiumLibrary">
+<arg>${okstartdate}</arg>
+<doc>Tap element identified by ``locator``. </doc>
+<status status="PASS" starttime="20220710 17:03:49.719" endtime="20220710 17:03:50.228"/>
+</kw>
+<status status="PASS" starttime="20220710 17:03:47.174" endtime="20220710 17:03:50.228"/>
+</kw>
+<kw name="Picklist Enddate Flight" library="bookflight">
+<kw name="Tap" library="AppiumLibrary">
+<arg>${enddate}</arg>
+<doc>Tap element identified by ``locator``. </doc>
+<status status="PASS" starttime="20220710 17:03:50.230" endtime="20220710 17:03:51.142"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${klikenddate}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" starttime="20220710 17:03:51.142" endtime="20220710 17:03:52.415"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${klikenddate}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220710 17:03:52.420" level="INFO">Clicking element 'xpath=//android.view.View[@index='29']'.</msg>
+<status status="PASS" starttime="20220710 17:03:52.415" endtime="20220710 17:03:53.431"/>
+</kw>
+<kw name="Tap" library="AppiumLibrary">
+<arg>${okenddate}</arg>
+<doc>Tap element identified by ``locator``. </doc>
+<status status="PASS" starttime="20220710 17:03:53.431" endtime="20220710 17:03:54.125"/>
+</kw>
+<status status="PASS" starttime="20220710 17:03:50.229" endtime="20220710 17:03:54.125"/>
+</kw>
+<kw name="Choose radio button" library="bookflight">
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${flighthotel}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220710 17:03:54.135" level="INFO">Clicking element 'xpath= //android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.LinearLayout/android.widget.RadioGroup/android.widget.RadioButton[2]'.</msg>
+<status status="PASS" starttime="20220710 17:03:54.128" endtime="20220710 17:03:54.917"/>
+</kw>
+<status status="PASS" starttime="20220710 17:03:54.126" endtime="20220710 17:03:54.917"/>
+</kw>
+<kw name="Choose checkbox" library="bookflight">
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${checkboxday}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220710 17:03:54.928" level="INFO">Clicking element 'xpath=//android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.LinearLayout/android.widget.RadioGroup/android.widget.CheckBox'.</msg>
+<status status="PASS" starttime="20220710 17:03:54.919" endtime="20220710 17:03:55.704"/>
+</kw>
+<status status="PASS" starttime="20220710 17:03:54.918" endtime="20220710 17:03:55.704"/>
+</kw>
+<kw name="Click Book for Bookflight" library="bookflight">
+<kw name="Tap" library="AppiumLibrary">
+<arg>${bookflight}</arg>
+<doc>Tap element identified by ``locator``. </doc>
+<status status="PASS" starttime="20220710 17:03:55.706" endtime="20220710 17:03:56.671"/>
+</kw>
+<status status="PASS" starttime="20220710 17:03:55.705" endtime="20220710 17:03:56.671"/>
+</kw>
+<kw name="Choose Price to confirm booking" library="bookflight">
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${price}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" starttime="20220710 17:03:56.673" endtime="20220710 17:03:57.395"/>
+</kw>
+<kw name="Tap" library="AppiumLibrary">
+<arg>${price}</arg>
+<doc>Tap element identified by ``locator``. </doc>
+<status status="PASS" starttime="20220710 17:03:57.396" endtime="20220710 17:03:58.323"/>
+</kw>
+<status status="PASS" starttime="20220710 17:03:56.672" endtime="20220710 17:03:58.323"/>
+</kw>
+<kw name="Click Confirm" library="bookflight">
+<kw name="Tap" library="AppiumLibrary">
+<arg>${buttonprice}</arg>
+<doc>Tap element identified by ``locator``. </doc>
+<status status="PASS" starttime="20220710 17:03:58.325" endtime="20220710 17:03:58.731"/>
+</kw>
+<status status="PASS" starttime="20220710 17:03:58.324" endtime="20220710 17:03:58.731"/>
+</kw>
+<kw name="Verify Page Booked" library="bookflight">
+<kw name="Element Should Contain Text" library="AppiumLibrary">
+<arg>${booked}</arg>
+<arg>${text_booked}</arg>
+<doc>Verifies element identified by ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220710 17:03:58.742" level="INFO">Verifying element 'xpath=//android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.CheckedTextView' contains text 'Your flight is booked. Reservation number is CADX2214'.</msg>
+<status status="PASS" starttime="20220710 17:03:58.733" endtime="20220710 17:03:59.491"/>
+</kw>
+<status status="PASS" starttime="20220710 17:03:58.732" endtime="20220710 17:03:59.491"/>
+</kw>
+<kw name="Close Application" library="AppiumLibrary" type="TEARDOWN">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" starttime="20220710 17:03:59.492" endtime="20220710 17:04:01.833"/>
+</kw>
+<status status="PASS" starttime="20220710 17:03:05.833" endtime="20220710 17:04:01.834"/>
+</test>
+<doc>Search BookFlight on signin</doc>
+<status status="PASS" starttime="20220710 17:03:05.208" endtime="20220710 17:04:01.837"/>
+</suite>
+<suite id="s1-s2" name="Searchflight" source="D:\mobileAutomation\suites\searchflight.robot">
+<test id="s1-s2-t1" name="User Should Be Able To Search Flight" line="8">
+<kw name="Open Flight Application" library="searchflight" type="SETUP">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>${REMOTE_URL}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>platformVersion=${PLATFORM_VERSION}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>appActivity=${ACTIVITY_NAME}</arg>
+<arg>appPackage=${PACKAGE_NAME}</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>newCommandTimeout=5000</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" starttime="20220710 17:04:01.874" endtime="20220710 17:04:25.308"/>
+</kw>
+<status status="PASS" starttime="20220710 17:04:01.873" endtime="20220710 17:04:25.308"/>
+</kw>
+<kw name="Klik Signin For The Application" library="searchflight">
+<kw name="Tap" library="AppiumLibrary">
+<arg>${Buttonsignin}</arg>
+<doc>Tap element identified by ``locator``. </doc>
+<status status="PASS" starttime="20220710 17:04:25.310" endtime="20220710 17:04:26.027"/>
+</kw>
+<status status="PASS" starttime="20220710 17:04:25.309" endtime="20220710 17:04:26.027"/>
+</kw>
+<kw name="Input Username" library="searchflight">
+<kw name="Input Text" library="AppiumLibrary">
+<arg>${Input_username}</arg>
+<arg>${username_login}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20220710 17:04:26.038" level="INFO">Typing text 'support@ngendigital.com' into text field '//*[@class='android.widget.EditText']'</msg>
+<status status="PASS" starttime="20220710 17:04:26.029" endtime="20220710 17:04:26.934"/>
+</kw>
+<status status="PASS" starttime="20220710 17:04:26.028" endtime="20220710 17:04:26.934"/>
+</kw>
+<kw name="Input Password" library="searchflight">
+<kw name="Input Text" library="AppiumLibrary">
+<arg>${Input_password}</arg>
+<arg>${password_login}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20220710 17:04:26.942" level="INFO">Typing text 'abc123' into text field '//*[@resource-id='com.example.myapplication:id/password']'</msg>
+<status status="PASS" starttime="20220710 17:04:26.936" endtime="20220710 17:04:27.635"/>
+</kw>
+<status status="PASS" starttime="20220710 17:04:26.935" endtime="20220710 17:04:27.635"/>
+</kw>
+<kw name="Klik button signin to login" library="searchflight">
+<kw name="Tap" library="AppiumLibrary">
+<arg>${Buttonsignin2}</arg>
+<doc>Tap element identified by ``locator``. </doc>
+<status status="PASS" starttime="20220710 17:04:27.637" endtime="20220710 17:04:28.483"/>
+</kw>
+<status status="PASS" starttime="20220710 17:04:27.636" endtime="20220710 17:04:28.483"/>
+</kw>
+<kw name="Klik Search for menu" library="searchflight">
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${Searchmenu}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" starttime="20220710 17:04:28.485" endtime="20220710 17:04:29.252"/>
+</kw>
+<kw name="Tap" library="AppiumLibrary">
+<arg>${Searchmenu}</arg>
+<doc>Tap element identified by ``locator``. </doc>
+<status status="PASS" starttime="20220710 17:04:29.252" endtime="20220710 17:04:29.664"/>
+</kw>
+<status status="PASS" starttime="20220710 17:04:28.484" endtime="20220710 17:04:29.665"/>
+</kw>
+<kw name="Input Flight Number" library="searchflight">
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${Input_flightnumber}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" starttime="20220710 17:04:29.667" endtime="20220710 17:04:30.554"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>${Input_flightnumber}</arg>
+<arg>${textsearch}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20220710 17:04:30.558" level="INFO">Typing text 'DA935' into text field '//*[@resource-id='com.example.myapplication:id/flight_number']'</msg>
+<status status="PASS" starttime="20220710 17:04:30.554" endtime="20220710 17:04:30.728"/>
+</kw>
+<status status="PASS" starttime="20220710 17:04:29.666" endtime="20220710 17:04:30.729"/>
+</kw>
+<kw name="Klik Button search for Flight Number" library="searchflight">
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${Button_search2}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" starttime="20220710 17:04:30.731" endtime="20220710 17:04:31.354"/>
+</kw>
+<kw name="Tap" library="AppiumLibrary">
+<arg>${Button_search2}</arg>
+<doc>Tap element identified by ``locator``. </doc>
+<status status="PASS" starttime="20220710 17:04:31.354" endtime="20220710 17:04:31.796"/>
+</kw>
+<status status="PASS" starttime="20220710 17:04:30.730" endtime="20220710 17:04:31.797"/>
+</kw>
+<kw name="Verify Page Search Flight Number" library="searchflight">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220710 17:04:33.800" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220710 17:04:31.799" endtime="20220710 17:04:33.800"/>
+</kw>
+<kw name="Page Should Contain Text" library="AppiumLibrary">
+<arg>${textsearch2}</arg>
+<doc>Verifies that current page contains `text`.</doc>
+<msg timestamp="20220710 17:04:33.976" level="INFO">Current page contains text 'DA 935'.</msg>
+<status status="PASS" starttime="20220710 17:04:33.800" endtime="20220710 17:04:33.976"/>
+</kw>
+<status status="PASS" starttime="20220710 17:04:31.798" endtime="20220710 17:04:33.976"/>
+</kw>
+<kw name="Close Application" library="AppiumLibrary" type="TEARDOWN">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" starttime="20220710 17:04:33.977" endtime="20220710 17:04:35.529"/>
+</kw>
+<status status="PASS" starttime="20220710 17:04:01.872" endtime="20220710 17:04:35.529"/>
+</test>
+<doc>Search Flight on signin</doc>
+<status status="PASS" starttime="20220710 17:04:01.841" endtime="20220710 17:04:35.532"/>
+</suite>
+<status status="PASS" starttime="20220710 17:03:05.155" endtime="20220710 17:04:35.536"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Suites">Suites</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Bookflight">Suites.Bookflight</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s2" name="Searchflight">Suites.Searchflight</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,8 @@
+Buttonsignin: com.example.myapplication:id/login
+Input_username: //*[@class='android.widget.EditText']
+Input_password: //*[@resource-id='com.example.myapplication:id/password']
+Buttonsignin2: com.example.myapplication:id/signIn
+Searchmenu: //*[@resource-id='com.example.myapplication:id/search_flight']
+Input_flightnumber: //*[@resource-id='com.example.myapplication:id/flight_number']
+Button_search2: //*[@resource-id='com.example.myapplication:id/searchFlight']
+verifysearch: xpath=//android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.TableLayout/android.widget.TableRow[2]
